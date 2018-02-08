@@ -8,8 +8,7 @@ require_relative '../lib/rack/reject_methods'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-# TODO: Change module name to the actual project name
-module RailsNew
+module WorkbrightDropbox
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
@@ -20,6 +19,8 @@ module RailsNew
 
     # Use Sidekiq as ActiveJob backend
     config.active_job.queue_adapter = :sidekiq
+
+    config.autoload_paths << "#{Rails.root}/services"
 
     # Configure generators, see: http://guides.rubyonrails.org/generators.html
     config.generators do |g|

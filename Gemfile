@@ -57,6 +57,8 @@ gem 'sidekiq'
 # Security
 gem 'secure_headers', require: false
 
+gem 'dropbox_api'
+
 group :production do
   # Remove this if the app is not hosted on Heroku
   gem 'heroku-deflater'
