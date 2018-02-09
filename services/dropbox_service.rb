@@ -24,4 +24,8 @@ class DropboxService
   def self.list_revisions(path, options={})
     @@client.list_revisions(path, options)
   end
+
+  def self.upload(path, content, options={})
+    @@client.upload(path, content, options)
+  end
 end
